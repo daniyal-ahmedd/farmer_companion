@@ -3,5 +3,4 @@ class Service {
   final String image;
 
   const Service({required this.name, required this.image});
-
 }

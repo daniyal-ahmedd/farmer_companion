@@ -120,7 +120,7 @@ class ExplorePage extends StatelessWidget {
             itemBuilder: (context, index) {
               return ProductCard(
                 product: products[index],
-                );
+              );
             },
           )
         ],
