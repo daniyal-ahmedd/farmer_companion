@@ -1,4 +1,4 @@
-import 'package:flutter/animation.dart';
+// import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_farmer/data/products.dart';
@@ -115,12 +115,12 @@ class ExplorePage extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              childAspectRatio: 0.9,
+              childAspectRatio: 0.96,
             ),
             itemBuilder: (context, index) {
               return ProductCard(
                 product: products[index],
-              );
+                );
             },
           )
         ],

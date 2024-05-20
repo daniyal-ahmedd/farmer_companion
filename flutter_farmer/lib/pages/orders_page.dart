@@ -1,6 +1,7 @@
-import '../utils/enums/order.dart';
 import 'package:flutter/material.dart';
-
+import '../utils/enums/order.dart';
+import '../data/orders.dart';
+import '../widgets/order_item.dart';
 class OrdersPage extends StatelessWidget {
   const OrdersPage({super.key});
 
@@ -24,13 +25,16 @@ class OrdersPage extends StatelessWidget {
         body: TabBarView(
           children: 
             List.generate(tabs.length, (index) {
+              final filteredOrders = orders.where((order) => order.status== OrderStatus.values[index]).toList();
               return ListView.separated(itemBuilder: (context, index) {
-                return const SizedBox();
-              }, separatorBuilder: (context, index) => SizedBox(height: 10), itemCount: 2);
-            }
+                Padding(padding: EdgeInsets.all(16));
+                final order = filteredOrders[index];
+                return OrderItem(order: order);
+              }, separatorBuilder: (context, index) => SizedBox(height: 10), itemCount: filteredOrders.length);
+            },
             )
           )
-      ),
+      )
     );
   }
 }

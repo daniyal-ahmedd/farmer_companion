@@ -12,10 +12,8 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-              builder: (context) => ProductDetailsPage(product: product)),
-        );
+        Navigator.of(context).push(MaterialPageRoute (
+        builder: (context) => ProductDetailsPage(product: product)),);
       },
       child: Card(
         clipBehavior: Clip.antiAlias,
@@ -31,7 +29,7 @@ class ProductCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 120,
+              height: 110,
               alignment: Alignment.topRight,
               width: double.infinity,
               padding: const EdgeInsets.all(8),
@@ -58,7 +56,7 @@ class ProductCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
+                    padding: const EdgeInsets.only(bottom: 1.0),
                     child: Text(
                       product.name,
                       style: Theme.of(context).textTheme.bodyLarge,

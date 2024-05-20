@@ -16,19 +16,19 @@ class ProductDetailsPage extends StatefulWidget {
 
 class _ProductDetailsPageState extends State<ProductDetailsPage> {
   bool showingMore = false;
-  late TapGestureRecognizer readMoreGestureRecognizer;
+  late TapGestureRecognizer  readMoreGestureRecognizer;
 
   @override
   void initState() {
     // TODO: implement initState
-    readMoreGestureRecognizer = TapGestureRecognizer()
-      ..onTap = () {
-        setState(() {
-          showingMore = !showingMore;
-        });
-      };
+    readMoreGestureRecognizer = TapGestureRecognizer()..onTap =() {
+      setState(() {
+        showingMore = !showingMore;
+      });
+    };
     super.initState();
   }
+
 
   @override
   void dispose() {
@@ -40,24 +40,33 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Details"), actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(IconlyBroken.bookmark),
+      appBar: AppBar(
+       title: const Text("Details"),
+       actions: [
+        IconButton(
+          onPressed:() {
+            
+          },
+          icon: const Icon(IconlyBroken.bookmark),
           )
-        ]),
-        body: ListView(padding: EdgeInsets.all(16), children: [
+       ]
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(16),
+        children: [
           Container(
             height: 250,
             width: double.infinity,
-            margin: const EdgeInsets.only(bottom: 16),
+            margin: const EdgeInsets.only(bottom:16),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(
-                      widget.product.image,
-                    ))),
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  widget.product.image,
+                )
+              )
+            ),
           ),
           Text(
             widget.product.name,
@@ -67,26 +76,25 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "In stock",
+              Text("In stock",
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.primary,
                 ),
-              ),
-              RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: "\$${widget.product.price}",
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ),
-                    TextSpan(
-                      text: "/${widget.product.unit}",
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                  ],
                 ),
-              )
+                RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: "\$${widget.product.price}",
+                              style: Theme.of(context).textTheme.bodyLarge,
+                            ),
+                            TextSpan(
+                              text: "/${widget.product.unit}",
+                              style: Theme.of(context).textTheme.bodySmall,
+                            ),
+                          ],
+                        ),
+                      )
             ],
           ),
           SizedBox(
@@ -112,10 +120,9 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: Text("5 ${widget.product.unit}",
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        )),
+                child: Text("5 ${widget.product.unit}", style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.bold,
+                )),
               ),
               SizedBox(
                 width: 30,
@@ -129,60 +136,64 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
             ],
           ),
           const SizedBox(height: 20),
-          Text("Description",
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  )),
+          Text(
+            "Description", style: Theme.of(context).textTheme.titleMedium?.copyWith(
+            fontWeight: FontWeight.bold,
+          )),
           const SizedBox(height: 5),
-          RichText(
-              text: TextSpan(
+          RichText(text: TextSpan(
             style: Theme.of(context).textTheme.bodyMedium,
             children: [
               TextSpan(
-                  text: showingMore
-                      ? widget.product.description
-                      : "${widget.product.description.substring(0, widget.product.description.length - 2)}...."),
+                text: showingMore? widget.product.description 
+                : "${widget.product.description.substring(0, widget.product.description.length - 2)
+                }...."
+              ),
               TextSpan(
-                  recognizer: readMoreGestureRecognizer,
-                  text: showingMore ? " Read less" : " Read more",
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.primary,
-                  ))
+                recognizer: readMoreGestureRecognizer,
+                text: showingMore ? " Read less" : " Read more",
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.primary,
+                )
+              )
             ],
           )),
           const SizedBox(height: 20),
-          Text("Related Products",
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  )),
+          Text(
+            "Related Products", style: Theme.of(context).textTheme.titleMedium?.copyWith(
+            fontWeight: FontWeight.bold,
+          )
+          ),
           SizedBox(height: 10),
           SizedBox(
             height: 90,
             child: ListView.separated(
-                physics: BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
+              physics: BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
                   return Container(
-                      height: 90,
-                      width: 80,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage(
-                                products[index].image,
-                              ))));
+                    height: 90,
+                    width: 80,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          products[index].image,
+                        )
+                    )
+                  )
+                  );
                 },
-                separatorBuilder: (context, index) => SizedBox(
-                      width: 10,
-                    ),
-                itemCount: products.length),
+              separatorBuilder: (context, index) => SizedBox(
+                width: 10,
+                ), 
+            itemCount: products.length),
           ),
           const SizedBox(height: 20),
-          FilledButton.icon(
-              onPressed: () {},
-              icon: const Icon(IconlyLight.bag),
-              label: Text("Add to Cart"))
-        ]));
+          FilledButton.icon(onPressed: () {}, icon: const Icon(IconlyLight.bag), label: Text("Add to Cart"))
+        ]
+      )
+    );
   }
 }

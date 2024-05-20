@@ -1,7 +1,31 @@
+import 'dart:async';
+// import 'package:cloud_firestore/cloud_firestore.dart';
+// import './firebase_helper.dart';
 import '../models/product.dart';
 
+
+//List<Product> products = await productHelper.getAllData();
+
+
+// FutureBuilder<QuerySnapshot>(
+//   future: FirebaseFirestore.instance.collection('products').get(),
+//   builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+//     if (snapshot.hasData) {
+//       return Column(
+//         children: snapshot.data?.docs?.map((doc) {
+//           // your widget here(use doc data)
+//           return YourWidget();
+//         })?.toList() ?? [],
+//       );
+//     } else {
+//       // or your loading widget here
+//       return Container();
+//     }
+//   },
+// );
+
 List<Product> products = [
-  const Product(
+   Product(
     name: "Fertilizers",
     description: "Fertilizers for the crops.",
     image: 'assets/fertilizer.jpg',
@@ -9,7 +33,7 @@ List<Product> products = [
     unit: 'kg',
     rating: 4.77,
 ),
-  const Product(
+   Product(
     name: "Fruit",
     description: "Sample",
     image: 'assets/fruits.webp',
@@ -17,7 +41,7 @@ List<Product> products = [
     unit: 'kg',
     rating: 3.86,
   ),
-  const Product(
+   Product(
     name: "Rake",
     description: "Sample",
     image: 'assets/rake.webp',
@@ -25,7 +49,7 @@ List<Product> products = [
     unit: 'pcs',
     rating: 4.18,
   ),
-  const Product(
+   Product(
     name: "Seeds",
     description: "Sample",
     image: 'assets/seeds.jpg',
@@ -33,7 +57,7 @@ List<Product> products = [
     unit: 'kg',
     rating: 5.00,
   ),
-  const Product(
+   Product(
     name: "Shovel",
     description: "Sample",
     image: 'assets/shovel.jpg',
@@ -41,7 +65,7 @@ List<Product> products = [
     unit: 'pcs',
     rating: 5.0,
   ),
-  const Product(
+   Product(
     name: "Tomato",
     description: "Sample",
     image: 'assets/tomato.jpg',
