@@ -8,6 +8,7 @@ import 'package:flutter_farmer/pages/profile_page.dart';
 import 'package:flutter_farmer/pages/services_page.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:badges/badges.dart' as badges;
+import '../common/drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -29,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(),
+      drawer: const SideDrawer(),
       appBar: AppBar(
         centerTitle: false,
         title: Column(

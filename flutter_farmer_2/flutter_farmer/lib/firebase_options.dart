@@ -41,46 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDTEnKIVlijlOFJeJlcv9I1iMDu2sBUbBE',
-    appId: '1:411403822361:web:e3746c42009fba48f29188',
-    messagingSenderId: '411403822361',
-    projectId: 'farmercompanion',
-    authDomain: 'farmercompanion.firebaseapp.com',
-    storageBucket: 'farmercompanion.appspot.com',
+    apiKey: '',// fill these fields with your own firebase project
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCgOC6Sk67R0KENVyN_kePrFnnOso9PQH8',
-    appId: '1:411403822361:android:61e7a6648a3125f4f29188',
-    messagingSenderId: '411403822361',
-    projectId: 'farmercompanion',
-    storageBucket: 'farmercompanion.appspot.com',
+    apiKey: '',// fill these fields with your own firebase project
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCM1-pHnvd158W-sWXZ4FXav4dQUOQNecA',
-    appId: '1:411403822361:ios:c5232646f0e8f2f6f29188',
-    messagingSenderId: '411403822361',
-    projectId: 'farmercompanion',
-    storageBucket: 'farmercompanion.appspot.com',
-    iosBundleId: 'com.example.flutterFarmer',
+    apiKey: '',// fill these fields with your own firebase project
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCM1-pHnvd158W-sWXZ4FXav4dQUOQNecA',
-    appId: '1:411403822361:ios:c5232646f0e8f2f6f29188',
-    messagingSenderId: '411403822361',
-    projectId: 'farmercompanion',
-    storageBucket: 'farmercompanion.appspot.com',
-    iosBundleId: 'com.example.flutterFarmer',
+    apiKey: '',// fill these fields with your own firebase project
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDTEnKIVlijlOFJeJlcv9I1iMDu2sBUbBE',
-    appId: '1:411403822361:web:5e8e257c03102656f29188',
-    messagingSenderId: '411403822361',
-    projectId: 'farmercompanion',
-    authDomain: 'farmercompanion.firebaseapp.com',
-    storageBucket: 'farmercompanion.appspot.com',
+    apiKey: '',// fill these fields with your own firebase project
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 }

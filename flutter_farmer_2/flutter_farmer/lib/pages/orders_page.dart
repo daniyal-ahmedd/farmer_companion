@@ -12,7 +12,7 @@ class OrdersPage extends StatelessWidget {
       length: tabs.length,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Mu orders"),
+          title: Text("My orders"),
           bottom: TabBar(
             isScrollable: true,
             tabs: List.generate(tabs.length, (index) {

@@ -1,8 +1,116 @@
-import 'dart:async';
+// import 'dart:async';
 // import 'package:cloud_firestore/cloud_firestore.dart';
 // import './firebase_helper.dart';
+
+
 import '../models/product.dart';
 
+List<Product> products = [
+   Product(
+    name: "Fertilizers",
+    description: "Fertilizers for the crops.",
+    image: 'assets/fertilizer.jpg',
+    price: 50,
+    unit: 'kg',
+    rating: 4.77,
+  ),
+   Product(
+    name: "Fruit",
+    description: "Sample",
+    image: 'assets/fruits.webp',
+    price: 10,
+    unit: 'kg',
+    rating: 3.86,
+  ),
+   Product(
+    name: "Rake",
+    description: "Sample",
+    image: 'assets/rake.webp',
+    price: 8,
+    unit: 'pcs',
+    rating: 4.18,
+  ),
+   Product(
+    name: "Seeds",
+    description: "Sample",
+    image: 'assets/seeds.jpg',
+    price: 14,
+    unit: 'kg',
+    rating: 5.00,
+  ),
+   Product(
+    name: "Shovel",
+    description: "Sample",
+    image: 'assets/shovel.jpg',
+    price: 11,
+    unit: 'pcs',
+    rating: 5.0,
+  ),
+   Product(
+    name: "Tomato",
+    description: "Sample",
+    image: 'assets/tomato.jpg',
+    price: 6,
+    unit: 'kg',
+    rating: 3.22,
+  ),
+];
+
+
+//before the presentations changings
+// import '../models/product.dart';
+
+
+// List<Product> products = [
+//    Product(
+//     name: "Fertilizers",
+//     description: "Fertilizers for the crops.",
+//     image: 'assets/fertilizer.jpg',
+//     price: 50.00,
+//     unit: 'kg',
+//     rating: 4.77,
+// ),
+//    Product(
+//     name: "Fruit",
+//     description: "Sample",
+//     image: 'assets/fruits.webp',
+//     price: 9.99,
+//     unit: 'kg',
+//     rating: 3.86,
+//   ),
+//    Product(
+//     name: "Rake",
+//     description: "Sample",
+//     image: 'assets/rake.webp',
+//     price: 8.44,
+//     unit: 'pcs',
+//     rating: 4.18,
+//   ),
+//    Product(
+//     name: "Seeds",
+//     description: "Sample",
+//     image: 'assets/seeds.jpg',
+//     price: 14.52,
+//     unit: 'kg',
+//     rating: 5.00,
+//   ),
+//    Product(
+//     name: "Shovel",
+//     description: "Sample",
+//     image: 'assets/shovel.jpg',
+//     price: 14.77,
+//     unit: 'pcs',
+//     rating: 5.0,
+//   ),
+//    Product(
+//     name: "Tomato",
+//     description: "Sample",
+//     image: 'assets/tomato.jpg',
+//     price: 6.84,
+//     unit: 'kg',
+//     rating: 3.22,
+//   ),
+// ];
 
 //List<Product> products = await productHelper.getAllData();
 
@@ -23,54 +131,3 @@ import '../models/product.dart';
 //     }
 //   },
 // );
-
-List<Product> products = [
-   Product(
-    name: "Fertilizers",
-    description: "Fertilizers for the crops.",
-    image: 'assets/fertilizer.jpg',
-    price: 50.00,
-    unit: 'kg',
-    rating: 4.77,
-),
-   Product(
-    name: "Fruit",
-    description: "Sample",
-    image: 'assets/fruits.webp',
-    price: 9.99,
-    unit: 'kg',
-    rating: 3.86,
-  ),
-   Product(
-    name: "Rake",
-    description: "Sample",
-    image: 'assets/rake.webp',
-    price: 8.44,
-    unit: 'pcs',
-    rating: 4.18,
-  ),
-   Product(
-    name: "Seeds",
-    description: "Sample",
-    image: 'assets/seeds.jpg',
-    price: 14.52,
-    unit: 'kg',
-    rating: 5.00,
-  ),
-   Product(
-    name: "Shovel",
-    description: "Sample",
-    image: 'assets/shovel.jpg',
-    price: 14.77,
-    unit: 'pcs',
-    rating: 5.0,
-  ),
-   Product(
-    name: "Tomato",
-    description: "Sample",
-    image: 'assets/tomato.jpg',
-    price: 6.84,
-    unit: 'kg',
-    rating: 3.22,
-  ),
-];
