@@ -1,2 +1,2 @@
 # farmer_companion
- this is a mobile app that will asiist farmers to track and grow the crops.
+ It is a mobile app made using flutter that will assist farmers to buy the products required for farming.
